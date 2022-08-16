@@ -1,0 +1,732 @@
+<!-- <div class="hero_area">
+  
+  <section class="slider_section">
+    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="detail-box">
+                  <h5>AUSTEN BOOKS</h5>
+                  <h1>
+                    For All Your <br />
+                    Reading Needs
+                  </h1>
+                  <p>
+                    Ideas for AUSTEN BOOKS Inventory · Books. Books are, of
+                    course, the primary inventory in a AUSTEN BOOKS. · Reading
+                    Accessories. Readers who enjoy reading in a variety
+                  </p>
+                  <a> Read More </a>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="img-box">
+                  <img src="../../assets/images/slide1.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="detail-box">
+                  <h5>AUSTEN BOOKS</h5>
+                  <h1>
+                    For All Your <br />
+                    Reading Needs
+                  </h1>
+                  <p>
+                    What to write in the about us page of a AUSTEN BOOKS? ·
+                    Mention the establishment year of your store · Mention the
+                    genre in which you are dealing in...
+                  </p>
+                  <a> Read More </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img-box">
+                  <img src="../../assets/images/slide2.webp" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="detail-box">
+                  <h5>AUSTEN BOOKS</h5>
+                  <h1>
+                    For All Your <br />
+                    Reading Needs
+                  </h1>
+                  <p>
+                    Located in the foothills of Santa Barbara and nestled in the
+                    tranquil atmosphere of the Vedanta Temple, the bookstore
+                    offers books that celebrate world spirituality with an
+                    emphasis on Eastern traditions and inspiring children’s
+                    books..
+                  </p>
+                  <a> Read More </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img-box">
+                  <img src="../../assets/images/slide3.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel_btn_box">
+          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
+  </section>
+ 
+</div> -->
+<section>
+  <div class="searchSection">
+    <div class="b-main-search">
+      <div class="searchImageContainer">
+        <!-- <img
+                      src="/img/header_tom_books.svg"
+                      alt="Buy, Sell, Rent Books and eBooks"
+                      class="mx-auto mb-md-0 mb-2 block d-lg-block d-md-none d-none"
+                    /> -->
+        <div class="col-xl-8 col-12 text-center my-auto">
+          <h1
+            class="font-dosis text-white font-weight-bolder text-lg-left text-md-center text-left"
+          >
+            Read eBooks
+          </h1>
+          <div class="main-search-block w-md-80 ml-lg-0 mx-md-auto">
+            <div class="container-fluid">
+              <div
+                style="
+                  width: 500px;
+                  align-content: center;
+                  margin-top: 20px;
+                  border: 1px solid #c3c3c3;
+                  border-radius: 10px;
+                  flex-direction: row;
+                "
+              >
+                <form
+                  class="search_form"
+                  [formGroup]="searchForm"
+                  (submit)="search()"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search here..."
+                    formControlName="data"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-warning" type="submit">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                      <!-- <span>Search</span> -->
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <ul *ngFor="let result of results">
+                <div class="container mt-4">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <div
+                        class="card p-3"
+                        style="
+                          border: 2px solid #063547;
+                          padding: 10px;
+                          border-radius: 10px 50px;
+                        "
+                      >
+                        <br />
+                        <!--<h3 >Username: <span style="font-family:Goudy Old Style">{{name}}</span></h3>-->
+                        <h5>
+                          Title:
+                          <span style="font-family: Goudy Old Style">{{
+                            result.title
+                          }}</span>
+                        </h5>
+                        <h5>
+                          Author name:
+                          <span style="font-family: Goudy Old Style"
+                            >{{ result.author_name }}
+                          </span>
+                        </h5>
+                        <h5>
+                          Publish date:
+                          <span style="font-family: Goudy Old Style">{{
+                            result.publish_date
+                          }}</span>
+                        </h5>
+                        <!--<h5 >Publish publisher: <span style="font-family:Goudy Old Style">{{result.publisher}</span></h5>-->
+                        <h5>
+                          Publish language:
+                          <span style="font-family: Goudy Old Style">{{
+                            result.language
+                          }}</span>
+                        </h5>
+                        <br />
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          style="background-color: #063547"
+                          (click)="
+                            wishlistdata(
+                              result.title,
+                              result.author_name,
+                              result.publish_date,
+                              result.publisher,
+                              result.language,
+                              result.first_publish_year
+                            )
+                          "
+                        >
+                          Add to wishlist
+                        </button>
+                        <br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!-- <form
+                action="/search/query" method="post" class="form-row pb-2" id="main-search-form"  (submit)="search()"
+              >
+                <div class="input-group pt-2 w-100">
+                  <input
+                    class="form-control"
+                    name="query"
+                    required=""
+                    type="search"
+                    maxlength="512"
+                    placeholder="Search here"
+                    autocomplete="on"
+                    autocapitalize="off"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      type="submit"
+                      class="btn btn-warning"
+                      style="z-index: 4"
+                      (submit)="search()"
+                    >
+                      <i class="far fa-search"></i>
+                      <span>SEARCH</span>
+                      <a href="/search">Search</a> 
+                    </button>
+                  </div>
+                </div>
+              </form> -->
+            <!-- <div
+                          class="what-is-isbn text-lg-left text-md-center text-left"
+                        >
+                          <a
+                            href="#"
+                            role="button"
+                            tabindex="0"
+                            class="isbn-popover-show"
+                            data-original-title=""
+                            title=""
+                            >What is ISBN?</a
+                          >
+                        </div> -->
+            <!-- <div class="isbn-tooltip-big">
+                          <div class="isbn-tip-background"></div>
+                          <div class="container">
+                            <div class="row p-3">
+                              <div class="col-12 pt-2 pb-10 text-left">
+                                <a
+                                  role="button"
+                                  tabindex="0"
+                                  class="close big-isbn-tooltip-close"
+                                >
+                                  <i class="far fa-times"></i>
+                                </a>
+                              </div>
+                              <div class="col-md-10 col-12 mx-auto">
+                                <p class="h1 text-white pb-4">What is ISBN?</p>
+                                <p class="text-white">
+                                  The ISBN is a 10 or 13 digit number that is
+                                  unique to a particular title, author, edition
+                                  and publisher. It can be found on the back
+                                  cover of each book.
+                                </p>
+                                <img
+                                  src="/img/isbn_white.svg"
+                                  class="mx-auto pt-6"
+                                  alt="ISBN / barcode"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div> -->
+            <!-- <script>
+                init.push(function () {
+                  var $isbnTooltip = $(".isbn-popover-show");
+                  $isbnTooltip.popover({
+                    container: "body",
+                    trigger: $(window).width() < 1024 ? "click" : "focus",
+                    html: true,
+                    placement: "bottom",
+                    offset: 200,
+                    template:
+                      '<div class="popover isbn-popover" role="tooltip">' +
+                      '       <div class="arrow"></div>' +
+                      '         <h3 class="popover-header"></h3>' +
+                      '       <div class="popover-body"></div>' +
+                      "      </div>",
+                    content:
+                      '<img src="/img/isbn.svg" class="float-right pl-3">\n' +
+                      '      <p class="h2 text-outer-space font-dosis pb-2">What is ISBN?</p>\n' +
+                      '      <p class="text-secondary">\n' +
+                      "        The ISBN is a 10 or 13 digit number that\n" +
+                      "        is unique to a particular title, author,\n" +
+                      "        edition and publisher. It can be found on\n" +
+                      "        the back cover of each book.\n" +
+                      "      </p>",
+                  });
+                  $isbnTooltip.on("show.bs.popover", function (e) {
+                    e.stopPropagation();
+                    if ($(window).width() < 1024) {
+                      e.preventDefault();
+                      $("body").addClass("isbn-tooltip-big-active");
+                    }
+                  });
+                  $isbnTooltip.on("hide.bs.popover", function (e) {
+                    e.stopPropagation();
+                    $("body").removeClass("isbn-tooltip-big-active");
+                  });
+                  $(".big-isbn-tooltip-close").on("click", function () {
+                    $isbnTooltip.popover("hide");
+                  });
+                });
+              </script> -->
+          </div>
+
+          <!-- <script async="">
+              document.getElementById("header-search-form").style.display =
+                "none";
+            </script>
+            <script>
+              init.push(function () {
+                var $navSearch = $(".nav-search");
+                $navSearch.trigger("nav.search.scroll");
+                $(window).on("scroll", function (e) {
+                  if ($("#header-search-form").css("display") !== "none") {
+                    $navSearch.trigger("nav.search.scroll");
+                  }
+                });
+              });
+            </script> -->
+        </div>
+        <div class="BTimage">
+          <div class="img-box">
+            <img src="../../assets/images/logo2_png.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- catagory section -->
+
+<section class="catagory_section layout_padding">
+  <div class="catagory_container">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Books Categories</h2>
+        <p>
+          The online AUSTEN BOOKS provides you with an option where you can
+          search by applying various filters that makes your search easy.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="../../assets/images/cat1.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Textbooks</h5>
+              <p>
+                A written source of information, designed specifically for the
+                use of students, on a particular subject or field of study that
+                is usually developed based on a syllabus and geared towards
+                meeting specific quality and learning requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="../../assets/images/cat2.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Science</h5>
+              <p>
+                Science is the pursuit and application of knowledge and
+                understanding of the natural and social world following a
+                systematic methodology based on evidence. Scientific methodology
+                includes the following: Objective observation: Measurement and
+                data (possibly although not necessarily using mathematics as a
+                tool) Evidence.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="../../assets/images/cat3.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>History</h5>
+              <p>
+                The branch of knowledge dealing with past events. a continuous,
+                systematic narrative of past events as relating to a particular
+                people, country, period, person, etc., usually written as a
+                chronological account; chronicle: a history of France; a medical
+                history of the patient. the aggregate of past events.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="../../assets/images/cat4.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Biography</h5>
+              <p>
+                Biographical writings as a whole the genre of biography.An
+                account of the life of something (such as an animal, a coin, or
+                a building) the biography of the commonwealth.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="../../assets/images/cat5.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Adventure</h5>
+              <p>
+                An adventure is an exciting experience or undertaking that is
+                typically bold, sometimes risky.Adventures may be activities
+                with some potential for physical danger such as traveling,
+                exploring, skydiving, mountain climbing, scuba diving, river
+                rafting or participating in extreme sports. Adventures are often
+                undertaken to create psychological arousal or in order to
+                achieve a greater goal such as the pursuit of knowledge that can
+                only be obtained in a risky manner.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="../../assets/images/cat6.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Fantasy</h5>
+              <p>
+                The power or process of creating especially unrealistic or
+                improbable mental images in response to psychological need an
+                object
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end catagory section -->
+
+<!-- about section -->
+
+<!-- <section class="about_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="img-box">
+          <img src="../../assets/images/about-img.png" alt="" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            <h2>About Our AUSTEN BOOKS</h2>
+          </div>
+          <p>
+            A warm feeling to introduce ourselves and a promise to take the
+            technology to the next level. Our hard work and committed team have
+            made us capable to stand in the market at such a large level.
+          </p>
+          <a> Read More </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- end about section -->
+
+<!-- review section -->
+
+<section class="client_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Review's</h2>
+      <hr />
+    </div>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="client_container">
+          <div class="detail-box">
+            <p>
+              Wast collection of books this platform has every book  i need !!! :)
+            </p>
+            <span>
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="client_id">
+            <div class="img-box">
+              <img src="../../assets/images/Neeraj_7.jpg" alt="" />
+            </div>
+            <div class="client_name">
+              <h5>Rohan Khanna </h5>
+              <h6>Developer</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <div class="client_container">
+          <div class="detail-box">
+            <p>“I highly recommend getting your books from here!”</p>
+            <span>
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="client_id">
+            <div class="img-box">
+              <img src="../../assets/images/Pratik.jpeg" alt="" />
+            </div>
+            <div class="client_name">
+              <h5>Pratik Jadhav</h5>
+              <h6>Student</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mx-auto">
+        <div class="client_container">
+          <div class="detail-box">
+            <p>
+              The book arrived in perfect conditions and i am satisfied with my purchase, 
+              i recomend it thanks. AAA+
+            </p>
+            <span>
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="client_id">
+            <div class="img-box">
+              <img src="../../assets/images/Mary_Kom_-_British_High_Commission,_Delhi,_27_July_2011.jpg" alt="" />
+            </div>
+            <div class="client_name">
+              <h5>Mary K</h5>
+              <h6>Student</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end client section -->
+
+<!-- blog section -->
+
+<section class="blog_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>From Our Blog</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box">
+          <div class="img-box">
+            <img src="../../assets/images/istockphoto-1132562466-1024x1024.jpg" alt="" />
+            <h4 class="blog_date">
+              <span> 5 August 2022 </span>
+            </h4>
+          </div>
+          <div class="detail-box">
+            <h5>heaven for readers</h5>
+            <p>
+              best cluster of books and a great site to spot books.
+              Stepped into "just have a look around" and ended up buying a pack of
+              good books
+            </p>
+            <a> Read More </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="box">
+          <div class="img-box">
+            <img src="../../assets/images/girls_books.jpg" alt="" />
+            <h4 class="blog_date">
+              <span> 7 August 2022 </span>
+            </h4>
+          </div>
+          <div class="detail-box">
+            <h5>Great collection of multilingual books available here</h5>
+            <p>
+              I visited the BOOKSTOWN to buy some foreign language books. The
+              Spanish and French books were all second-hand and priced between
+              1200 and 4000.
+            </p>
+            <a> Read More </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end blog section -->
+
+<!-- info section -->
+
+<section class="info_section layout_padding2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 info-col">
+        <div class="info_detail">
+          <h4>About Us</h4>
+          <p>
+            BOOKSTOWN is a town or village with many used books or antiquarian
+            book stores. These stores, as well as literary festivals, attract
+            bibliophile tourists. Some book towns are members of the
+            International Organisation of Book Towns.
+          </p>
+          <div>
+            <a
+              href="https://www.facebook.com/login/"
+              class="fa fa-facebook"
+              style="color: white; size: 30px"
+            ></a
+            >&nbsp;&nbsp;
+            <a
+              href="https://twitter.com/i/flow/login"
+              class="fa fa-twitter"
+              style="color: white; size: 30px"
+            ></a
+            >&nbsp;&nbsp;
+            <a
+              href="https://www.instagram.com/accounts/login/"
+              class="fa fa-instagram"
+              style="color: white; size: 30px"
+            ></a
+            >&nbsp;&nbsp;
+            <a
+              href="https://www.linkedin.com/login"
+              class="fa fa-linkedin"
+              style="color: white; size: 30px"
+            ></a
+            >&nbsp;&nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 info-col">
+        <div class="info_contact">
+          <h4>Address</h4>
+          <div class="contact_link_box">
+            <a>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span> Location </span>
+            </a>
+            <a>
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span> Call +91-1234567890 </span>
+            </a>
+            <a>
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span> bookstown@gmail.com </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 info-col">
+        <div class="info_contact">
+          <h4>Newsletter</h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 info-col">
+        <div class="map_container">
+          <div class="map">
+            <div id="googleMap"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end info section -->
+
+<!-- footer section -->
+<footer class="footer_section">
+  <div class="container">
+    <p>
+      &copy; <span id="displayYear"></span> All Rights Reserved By BOOKSTOWN PVT
+      LTD
+    </p>
+  </div>
+</footer>
+<!-- footer section -->
+
+<!-- jQery -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- bootstrap js -->
+<script src="js/bootstrap.js"></script>
+<!-- custom js -->
+<script src="js/custom.js"></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
